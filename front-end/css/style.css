@@ -1809,6 +1809,7 @@ body.ie ._ibg img {
   position: relative;
   z-index: 10;
   margin-left: auto;
+  margin-right: 15px;
 }
 
 .menu__btn--active .menu__btn-style {
@@ -1925,8 +1926,8 @@ body.ie ._ibg img {
 .skills__photo {
   display: block;
   margin-right: 30px;
-  width: 415px;
-  height: 450px;
+  max-width: 415px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2076,8 +2077,7 @@ body.ie ._ibg img {
 }
 
 .portfolio__img {
-  width: 360px;
-  height: 360px;
+  max-width: 360px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2572,8 +2572,7 @@ body.ie ._ibg img {
   }
 
   .portfolio__img {
-    width: 260px;
-    height: 260px;
+    max-width: 260px;
   }
 
   .reviews__inner {
@@ -2582,6 +2581,10 @@ body.ie ._ibg img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .reviews__block {
+    margin-right: 0;
   }
 }
 
@@ -2658,7 +2661,7 @@ body.ie ._ibg img {
   }
 
   .achievement__item {
-    max-width: 200px;
+    max-width: calc(50% - 15px);
   }
 
   .achievement__item:nth-child(2n) {
@@ -2708,8 +2711,7 @@ body.ie ._ibg img {
   }
 
   .portfolio__img {
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
   }
 
   .reviews__video-img {

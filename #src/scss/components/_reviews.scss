@@ -20,6 +20,9 @@
     line-height: 130%;
     max-width: 400px;
     margin-bottom: 100px;
+    @include media(992px){
+      margin-right: 0;
+    }
   }
   &__img {
     display: block;

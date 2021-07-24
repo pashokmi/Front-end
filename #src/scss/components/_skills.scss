@@ -16,8 +16,8 @@
   &__photo {
     display: block;
     margin-right: 30px;
-    width: 415px;
-    height: 450px;
+    max-width: 415px;
+    width: 100%;
     object-fit: cover;
      @include media(1200px){
        margin-bottom: 50px;
