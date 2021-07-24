@@ -1,0 +1,76 @@
+.achievement {
+  padding-top: 140px;
+  margin-bottom: 100px;
+  @include media(768px){
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media(1200px){
+      justify-content: center;
+    }
+  }
+  &__item {
+    background-color: $grey;
+    padding: 50px 10px;
+    border: 1px solid #dbdbed;
+    text-align: center;
+    max-width: 280px;
+    width: 100%;
+    margin-bottom: 40px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    @include media(768px){
+      max-width: 200px;
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+    @include media(479px){
+      max-width: 300px;
+      &:nth-child(2n+1){
+        margin-right: 0;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-top: 100px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 98px;
+      height: 80px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    &--works::before {
+      background-image: url("../img/icons/sprite.svg#works");
+    }
+    &--clients::before {
+      background-image: url("../img/icons/sprite.svg#clients");
+    }
+    &--coffe::before {
+      background-image: url("../img/icons/sprite.svg#coffee");
+    }
+    &--review::before {
+      background-image: url("../img/icons/sprite.svg#review");
+    }
+  }
+  &__number {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 100%;
+  }
+}
